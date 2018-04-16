@@ -1,4 +1,4 @@
-# Docker installation:
+# Docker installation
 https://docs.docker.com/install/
 
 Exists instructions for Debian but as usual there is not support.
@@ -49,8 +49,31 @@ this installation:
 ```sh
 docker login ibox.ific.uv.es
 USER: external_fuser
-PWD: xxx-xxx-xxx-xxx
+PWD: 2b86-4165-11e8-ad7f-685b
 ```
 
 # Preparing the images
+
+Read <pre>make_dockers.sh</pre>, these instructions are related to place images
+in a docker registry. 
+
+The images (once <pre>make_dockers.sh</pre>) is runned are placed locally.
+
+Latter the script <pre>push_dockers.sh</pre> will store the dockers in the ibox repository.
+
+>**Rational**
+This is a beta version, usually the images must be tagged. At the time of first writing
+this tutorial the image tag used is the _current date_. Future versions will require
+specific tagging of the image.
+>
+
+# Some best practices
+
+* Place an entry point.
+* Use environment variables to change the ID and UID
+* Use standard users that could be changed
+* X11 is allowed.
+* You can use CURL or WGET inside of building scripts, is preffered to generate a bundle.
+* Make an external revision if it is the first time you try to produce an image.
+
 
