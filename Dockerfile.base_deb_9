@@ -1,0 +1,23 @@
+FROM debian:9
+
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
+RUN apt-get install -y --no-install-recommends libboost-all-dev cmake gcc g++ git wget build-essential cmake \
+	libpng-dev libtiff5-dev libxml2-dev libjpeg-dev  zlib1g-dev  libwrap0-dev \
+	libssl-dev cython libtbb-dev libjpeg62-turbo-dev libtiff-dev \
+	curl xorg-dev libicu-dev libtbb-dev python-numpy ipython libhdf5-dev \
+	libpng-dev libtiff-dev dcmtk git dpkg-dev cmake g++ gcc binutils libx11-dev libxpm-dev \
+	libxft-dev libxext-dev gfortran libssl-dev libpcre3-dev \
+	xlibmesa-glu-dev libglew1.5-dev libftgl-dev \
+	default-libmysqlclient-dev  libfftw3-dev libcfitsio-dev \
+	graphviz-dev libavahi-compat-libdnssd-dev \
+	libldap2-dev python-dev libxml2-dev libkrb5-dev \
+	libgsl0-dev  libqt5concurrent5 libqt5core5a \
+	 libqt5dbus5  libqt5opengl5 libqt5opengl5-dev libqt5printsupport5 \
+	 qt5-default qtbase5-private-dev \
+	 libqt5xml5 libqt5xmlpatterns5 libqt5xmlpatterns5-dev phonon4qt5 \
+	 qt5-image-formats-plugins qt5-qmake subversion eclipse
+
+
+
