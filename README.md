@@ -49,7 +49,7 @@ this installation:
 ```sh
 docker login ibox.ific.uv.es
 USER: external_fuser
-PWD: 2b86-4165-11e8-ad7f-685b
+PWD: XXXXX-XXXXXX-XXXXXX-XXXXXX
 ```
 
 # Preparing the images
